@@ -5,7 +5,7 @@
 ### the listed folders, just keep that line commented out.        ###
 #####################################################################
 ### Path to your config folder you want to back up
-#config_folder=~/klipper_config
+config_folder=~/klipper_config
 
 ### Path to your Klipper folder, by default that is '~/klipper'
 #klipper_folder=~/klipper
@@ -54,7 +54,7 @@ push_config() {
   local current_date
   
   cd "${config_folder}" || exit 1
-  git pull
+x  git pull
   git add .
   current_date=$(date +"%Y-%m-%d %T")
   git commit -m "Autocommit from ${current_date}" -m "${m1}" -m "${m2}" -m "${m3}" -m "${m4}"
